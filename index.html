@@ -143,6 +143,8 @@
 
 
 
+
+
         // practical of async and await  function with  try and catch
 
         try {
@@ -163,10 +165,25 @@
         } catch (error) {
             console.error('Error fetching TODO :', error)
         }
+
+        // Closures  program  for practices 
+
+        function outerFunction() {
+            return new Promise((resovle) => {
+                setTimeout(() => { resovle('resolved !') }, 3000)
+            })
+        }
+
+        async function inner(params) {
+
+            console.log('calling...')
+            const result = await outerFunction();
+            console.log(result);
+
+        }
+
+        inner();
     }
-
-
-
     fetchAPI();
 </script>
 
