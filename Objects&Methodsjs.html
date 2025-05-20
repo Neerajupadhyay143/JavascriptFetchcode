@@ -134,12 +134,8 @@
 
     function submitData() {
         const userForm = document.getElementById("userForm");
-
-
         const output = document.getElementById("output");
-
-        userForm.addEventListener('submit', function (event) {
-            event.preventDefault();
+        function centralData() {
             const userData = {
                 name: document.getElementById("name").value,
                 age: document.getElementById("age").value,
@@ -153,7 +149,14 @@
             <p><strong>Age:</strong> ${userData.age}</p>
             `;
 
+        }
+        userForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+            centralData();
+
         })
+
+
     }
 
 
