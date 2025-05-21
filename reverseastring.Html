@@ -131,7 +131,8 @@
     function reverseString() {
 
         let string = document.getElementById('text').value;
-        if (string === isNaN) {
+
+        if (!isNaN(string) && string.trim() !== "") {
             document.getElementById('result').innerHTML = "please enter a valid text !"
             return
         }
