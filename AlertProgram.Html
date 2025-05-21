@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    button {
+        color: white;
+        background: black;
+        outline: none;
+        border: none;
+        padding: 10px;
+        font-size: 20px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+</style>
+
+<body style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
+    <div style="display: flex; justify-content: center; flex-direction: column;">
+        <p id="myparagraph" style="font-size: 40px; font-weight: 600; font-family: sans-serif;"> this is a Alert
+            Page</p>
+        <button>
+            click me
+        </button>
+    </div>
+
+</body>
+<script>
+    let button = document.getElementsByTagName("button");
+    button[0].addEventListener('click', () => {
+        alert('button clicked !')
+    })
+</script>
+
+
+</html>
