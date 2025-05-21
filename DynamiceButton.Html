@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body style="display: flex; justify-content: center;">
+    <p id="myparagraph" style="font-size: 40px; font-weight: 600; font-family: sans-serif;"> this is a Dynamic Button
+        Page</p>
+    <div id="container"></div>
+</body>
+<script>
+    let container = document.getElementById("container");
+    let button = document.createElement('button');
+    button.style = "color:white; background:black; outline:none; border:none; padding:10px ;font-size:20px ;border-radius:10px; cursor:pointer;"
+    button.textContent = "Click me";
+    container.appendChild(button);
+</script>
+
+</html>
