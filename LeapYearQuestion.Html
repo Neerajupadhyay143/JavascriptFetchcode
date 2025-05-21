@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        padding: 0px;
+        margin: 0px;
+    }
+
+    .header {
+        height: 50px;
+        width: 100%;
+        position: static;
+        top: 10px;
+        background-color: black;
+        padding: 10px !important;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 2rem;
+        flex-grow: 1;
+    }
+
+    .header-right-section {
+        display: flex;
+        font-size: 20px;
+        gap: 30px;
+        padding-right: 20px;
+    }
+
+    .header-left-section {
+        padding-left: 20px;
+    }
+
+    body {
+        background-color: rgb(35, 34, 34);
+        font-family: sans-serif;
+        color: white;
+
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+    }
+
+    .container-items {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        font-size: 14px;
+
+    }
+
+    .input {
+        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+        text-decoration: none;
+        border: none;
+        font-family: sans-serif;
+        box-shadow: 0px 11px 10px -6px gray;
+
+    }
+
+    .input:focus {
+        outline: none;
+        background-color: gray;
+        color: aliceblue;
+    }
+
+    button {
+        width: 100%;
+        height: 40px;
+        font-size: 20px;
+        font-weight: 600;
+        border-radius: 10px;
+        outline: none;
+        background-color: blue;
+        border: none;
+        cursor: pointer;
+        color: white;
+    }
+
+    /* media queries  */
+
+    @media (max-width:780px) {
+        .header-right-section {
+            display: none;
+        }
+    }
+</style>
+
+<body>
+
+    <div class="container">
+        <div class="header ">
+            <div class="header-left-section">
+                <!-- left section -->
+                <h4 class="header-itmes">Products</h4>
+            </div>
+            <div class="header-right-section">
+                <!-- right section  -->
+                <span class="header-itmes"> About</span>
+                <span class="header-itmes"> Home</span>
+                <span class="header-itmes"> Contact us</span>
+            </div>
+        </div>
+        <div class="demo"
+            style="color: white ; display: flex; flex-direction: column; width: 100%; align-items: center; gap: 40px;">
+            <p id="demo" style="display: flex ; flex-direction: column; gap: 40px;"></p>
+        </div>
+        <button onclick="leapYear()"> click me </button>
+        <input type="text" id="text" placeholder="Enter your text" />
+        <div id="result"></div>
+
+    </div>
+</body>
+<script>
+    function leapYear() {
+        year = document.getElementById('text').value;
+
+        if (year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0)) {
+            document.getElementById('result').innerHTML = " This is a Leap Year";
+        } else {
+            document.getElementById('result').innerHTML = " This is not a Leap Year";
+        }
+    }
+</script>
+
+</html>
