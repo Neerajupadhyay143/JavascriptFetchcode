@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        font-family: sans-serif;
+    }
+
+    button {
+        color: white;
+        background: black;
+        outline: none;
+        border: none;
+        padding: 10px;
+        font-size: 20px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+
+    input {
+        padding: 10px;
+        border-radius: 10px;
+        outline: none;
+        border: 2px solid gray;
+        font-family: sans-serif;
+        font-weight: 600;
+
+    }
+
+    input:focus {
+        border-color: rgb(13, 255, 45);
+    }
+
+    h3 {
+        font-size: 30px;
+    }
+</style>
+
+<body style="display: flex; justify-content: center; flex-direction: column; align-items: center;">
+    <div style="display: flex; justify-content: center; flex-direction: column;">
+        <p id="myparagraph" style="font-size: 40px; font-weight: 600; font-family: sans-serif;"> this is a Random
+            Page</p>
+        <div style="display: flex; flex-direction: column; justify-content: center ;align-items: center;">
+
+            <div style="display: flex; align-items: center; justify-content: center; gap: 30px;">
+                <!-- <div>
+                    <input type="number" id="num" placeholder="Enter a number">
+                </div> -->
+                <!-- <button onclick="factorialweb()">
+                    click me
+                </button> -->
+
+            </div>
+            <div>
+                <h3>Output: <span id="result"></span></h3>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+<script>
+
+    function RandomNum() {
+        var data = Math.floor(Math.random() * (50 + 1) + 50);
+        document.getElementById('result').innerHTML = data;
+        console.log(" Data is hear : ", data);
+
+    }
+    RandomNum(); 
+</script>
+
+</html>
