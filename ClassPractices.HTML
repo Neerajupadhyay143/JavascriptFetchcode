@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="result"></div>
+    <Script>
+
+        class car {
+            constructor() {
+                this.brandName = "";
+            }
+            setBrandName(name) {
+                this.brandName = name;
+            }
+            getBarndNAme() {
+                return this.brandName;
+            }
+        }
+        let car1 = new car();
+        let userInput = ""
+
+        while (userInput === "") {
+            userInput = prompt("enter Brand name ");
+
+            if (userInput === "") {
+                alert('please enter a brand name !');
+            }
+        }
+
+        car1.setBrandName(userInput);
+        document.getElementById('result').innerHTML = car1.getBarndNAme();
+    </Script>
+</body>
+
+</html>
