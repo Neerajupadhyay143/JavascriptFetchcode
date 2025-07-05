@@ -1,0 +1,120 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background: linear-gradient(270deg, #00c6ff, #0072ff, #fc00ff, #00dbde);
+    background-size: 800% 800%;
+    animation: gradientShift 10s ease infinite;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+/* keyframes for shifting the gradient */
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    max-width: 100%;
+    width: 50%;
+    background: rgba(255, 255, 255, 0.31);
+    /* background: rgba(255, 255, 255, 0.1); */
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(100px);
+    border-radius: 12px;
+}
+
+form h1 {
+    border-bottom: 1px solid white;
+    color: white;
+    padding: 10px;
+    font-size: 2rem;
+    text-align: center;
+    text-wrap: none;
+}
+
+.form-control {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    /* padding: 10px; */
+}
+
+form label {
+    margin-top: 10px;
+}
+
+form {
+    width: 100%;
+    max-width: 500px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+form input {
+    margin-top: 1px;
+    margin-bottom: 1px;
+    padding: 10px;
+    border-radius: 12px;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    font-family: sans-serif;
+}
+
+@media (max-width: 575px) {
+    .container {
+        width: 80%;
+        max-width: auto;
+    }
+}
+
+#form #btn {
+    width: 100%;
+    border-radius: 7px;
+    margin-top: 20px;
+    font-size: 1em;
+    color: white;
+    background-color: transparent;
+    border: 2px solid white;
+}
+
+.form-control .error {
+    color: red;
+    font-size: 12px;
+    font-weight: 500;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 13px;
+    margin: 2px;
+}
+
+.form-control.success input {
+    border: 2px solid green;
+    border-color: green;
+}
+
+.form-control.error input {
+    border: 2px solid red;
+    border-color: red;
+}
